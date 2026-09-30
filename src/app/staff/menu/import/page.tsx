@@ -81,7 +81,7 @@ export default function BulkMenuImport() {
           </div>
 
           <div 
-            className={`border-2 border-dashed rounded-2xl p-12 text-center transition-colors ${
+            className={`rounded-2xl border-2 border-dashed p-6 text-center transition-colors sm:p-12 ${
               file ? 'border-orange-500 bg-orange-50' : 'border-slate-300 hover:border-slate-400 bg-slate-50'
             }`}
           >

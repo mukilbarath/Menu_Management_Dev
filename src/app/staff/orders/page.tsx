@@ -126,7 +126,7 @@ export default function StaffPortal() {
       {/* Main Content */}
       <main className="flex-1 p-8">
         {error && <p role="alert" className="p-4 bg-red-50 text-red-700">{error}</p>}
-        <header className="mb-8 flex justify-between items-end">
+        <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-3xl font-bold text-slate-800">Active Orders</h2>
             <p className="text-slate-500 mt-1">Manage incoming requests</p>
@@ -138,7 +138,7 @@ export default function StaffPortal() {
 
         <ServiceCalls />
         {orders.filter(o => o.status !== 'closed').length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-32 bg-white rounded-2xl shadow-sm border border-slate-200 text-center">
+          <div className="flex min-h-80 flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center shadow-sm">
             <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mb-6">
               <Utensils className="w-12 h-12 text-slate-300" />
             </div>

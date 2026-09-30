@@ -87,7 +87,7 @@ export default function KitchenDisplaySystem() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans flex flex-col">
       {/* Header */}
-      <header className="bg-slate-950 border-b border-slate-800 p-6 flex justify-between items-center sticky top-0 z-10 shadow-md shadow-black/20">
+      <header className="sticky top-0 z-10 flex flex-col gap-4 border-b border-slate-800 bg-slate-950 p-4 shadow-md shadow-black/20 sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-purple-500/20 text-purple-400 rounded-xl">
             <ChefHat className="w-8 h-8" />
@@ -97,8 +97,8 @@ export default function KitchenDisplaySystem() {
             <p className="text-slate-400 text-sm font-medium">Service view</p>
           </div>
         </div>
-        <div className="flex gap-4 items-center">
-          <div className="flex gap-2">
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap gap-2">
             <span className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-bold border border-slate-700">
               <span className="text-yellow-500 mr-2">{activeOrders.filter(o => o.status === 'accepted').length}</span> New
             </span>
